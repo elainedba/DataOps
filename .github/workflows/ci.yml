@@ -19,6 +19,9 @@ jobs:
 
       - name: Lint
         run: flake8 app tests
+
+      - name: Testes
+        run: pytest
     
       - name: Type check (mypy)
         run: mypy app
