@@ -40,3 +40,11 @@ jobs:
         with:
           name: summary-csv
           path: output/summary.csv
+
+  deploy:
+    needs: validate
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy
+        run: echo "Promovendo artefato para produção"
