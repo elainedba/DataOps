@@ -19,3 +19,12 @@ jobs:
 
       - name: Lint
         run: flake8 app tests
+    
+      - name: Type check (mypy)
+        run: mypy app
+
+      - name: Security check (bandit)
+        run: bandit -r app
+
+      - name: Complexity check (radon)
+        run: radon cc app -a
