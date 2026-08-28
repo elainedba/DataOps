@@ -1,9 +1,10 @@
 name: CI/CD Pipeline
 
 on:
-  jobs:
-  validate:
-    runs-on: ubuntu-latest
   push:
     branches:
       - feature/esteira
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
