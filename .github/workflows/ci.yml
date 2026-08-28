@@ -31,3 +31,12 @@ jobs:
 
       - name: Complexity check (radon)
         run: radon cc app -a
+
+      - name: Gerar summary
+        run: python app/pipeline.py
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: summary-csv
+          path: output/summary.csv
