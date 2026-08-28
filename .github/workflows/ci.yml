@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - feature/esteira
+      - main
 
 jobs:
   validate:
