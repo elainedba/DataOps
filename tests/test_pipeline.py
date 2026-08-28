@@ -3,6 +3,7 @@ import pytest
 
 from app.pipeline import run_pipeline
 
+#testando a pipeline
 
 def test_pipeline_creates_summary_file(tmp_path):
     input_file = tmp_path / "sales.csv"
