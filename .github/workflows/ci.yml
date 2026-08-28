@@ -33,7 +33,7 @@ jobs:
         run: radon cc app -a
 
       - name: Gerar summary
-        run: python app/pipeline.py
+        run: python -c "from app.pipeline import run_pipeline; run_pipeline('data/sales.csv', 'output/summary.csv')"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
